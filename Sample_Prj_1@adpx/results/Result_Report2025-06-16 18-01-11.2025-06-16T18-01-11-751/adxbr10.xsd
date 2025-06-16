@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.dSPACE.de/AutomationDesk/BlockReport" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.dSPACE.de/AutomationDesk/BlockReport" elementFormDefault="qualified">
+	<xs:element name="AUTOMATIONDESK-BLOCKREPORT">
+		<xs:annotation>
+			<xs:documentation>Root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TITLE"/>
+				<xs:element ref="TREE" minOccurs="0"/>
+				<xs:element ref="HEADER" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="GLOBAL-INFORMATION" minOccurs="0">
+					<xs:complexType>
+						<xs:choice>
+							<xs:element name="BUILD-IN-LIBRARY" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" type="xs:normalizedString" use="required"/>
+									<xs:attribute name="State" type="xs:normalizedString" use="required"/>
+									<xs:attribute name="Symbol" type="xs:normalizedString" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="CUSTOM-LIBRARY" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attribute name="Name" type="xs:normalizedString" use="required"/>
+									<xs:attribute name="FullDirectoryPath" type="xs:normalizedString" use="required"/>
+									<xs:attribute name="Symbol" type="xs:normalizedString" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="FinishingState" type="xs:normalizedString" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TITLE">
+		<xs:annotation>
+			<xs:documentation>Global information of the report</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EXEC-NAME">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:normalizedString">
+								<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+								<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="RESULT-NAME">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:normalizedString">
+								<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+								<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DESCRIPTION" type="xs:string"/>
+				<xs:element name="PRE-BLOCKS">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="TEXT-BLOCK"/>
+							<xs:element ref="LINK-BLOCK"/>
+							<xs:element ref="PICTURE-BLOCK"/>
+							<xs:element ref="TABLE-BLOCK"/>
+							<xs:element ref="HTML-BLOCK"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="POST-BLOCKS">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="TEXT-BLOCK"/>
+							<xs:element ref="LINK-BLOCK"/>
+							<xs:element ref="PICTURE-BLOCK"/>
+							<xs:element ref="TABLE-BLOCK"/>
+							<xs:element ref="HTML-BLOCK"/>
+							<xs:element ref="REPORTLINK"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="HEADER">
+		<xs:annotation>
+			<xs:documentation>A header</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:sequence>
+						<xs:element name="BLOCKS">
+							<xs:complexType>
+								<xs:choice minOccurs="0" maxOccurs="unbounded">
+									<xs:element ref="TEXT-BLOCK"/>
+									<xs:element ref="LINK-BLOCK"/>
+									<xs:element ref="PICTURE-BLOCK"/>
+									<xs:element ref="TABLE-BLOCK"/>
+									<xs:element ref="HTML-BLOCK"/>
+									<xs:element ref="REPORTLINK"/>
+									<xs:element ref="PAGEBREAK"/>
+									<xs:element ref="ANCHOR"/>
+									<xs:element ref="DECISION"/>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+						<xs:element ref="HEADER" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:element ref="REPORTLINK"/>
+				</xs:choice>
+				<xs:sequence>
+					<xs:element name="START-TIME" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="STOP-TIME" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="EXECUTION-DURATION" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="NAME" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="LIBRARY-LINK" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="CREATION-DATE" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="MODIFICATION-DATE" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="AUTHOR" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"/>
+					<xs:element name="RESULT-STATE" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="HIERARCHY-NAME" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="ATTACHMENT" type="xs:normalizedString" minOccurs="0"/>
+					<xs:element name="STATUSICON" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+			<xs:attribute name="Type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:normalizedString">
+						<xs:enumeration value="PROJECT"/>
+						<xs:enumeration value="FOLDER"/>
+						<xs:enumeration value="SEQUENCE"/>
+						<xs:enumeration value="BLOCK"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Title" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TREE">
+		<xs:annotation>
+			<xs:documentation>An overview tree</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="TREE-ENTRY" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="tree-file-ref" type="xs:normalizedString" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TREE-ENTRY">
+		<xs:annotation>
+			<xs:documentation>An element in the tree</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TEXT" type="xs:normalizedString" minOccurs="0"/>
+				<xs:element ref="TREE-ENTRY" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="STATUSICON" type="xs:normalizedString" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+			<xs:attribute name="Entry-Id" type="xs:normalizedString" use="required"/>
+			<xs:attribute name="ref-file-id" type="xs:normalizedString" use="optional"/>
+			<xs:attribute name="Symbol" type="xs:normalizedString" use="required"/>
+			<xs:attribute name="Expanded" type="xs:boolean" use="required"/>
+			<xs:attribute name="StatusSymbol" type="xs:normalizedString" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TEXT-BLOCK">
+		<xs:annotation>
+			<xs:documentation>A block containing a text with additional informations</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TEXT" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+								<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+								<xs:attribute name="Font-Weight" type="Font-Weight-Type" use="optional"/>
+								<xs:attribute name="Font-Style" type="Font-Style-Type" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LINK-BLOCK">
+		<xs:annotation>
+			<xs:documentation>A block containing a link</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="LINK" type="xs:normalizedString"/>
+				<xs:element name="REPRESENTATION" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:normalizedString"/>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PICTURE-BLOCK">
+		<xs:annotation>
+			<xs:documentation>A block containing a picture with additional informations</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PATH">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:normalizedString">
+								<xs:attribute name="Alignment" type="xs:normalizedString" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TITLE" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+								<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CAPTION" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+								<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="DESCRIPTION" minOccurs="0">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+								<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TABLE-BLOCK">
+		<xs:annotation>
+			<xs:documentation>A block containing table informations</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DATA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ROW" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CELL" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+														<xs:attribute name="BgColor" type="xs:normalizedString" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:normalizedString">
+									<xs:enumeration value="LIST"/>
+									<xs:enumeration value="DICTIONARY"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="Row-Count" type="xs:integer" use="required"/>
+						<xs:attribute name="Cell-Count" type="xs:integer" use="required"/>
+						<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="COLUMN-HEADER" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COLUMN-CELL" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+											<xs:attribute name="BgColor" type="xs:normalizedString" use="optional"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ROW-HEADER" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ROW-CELL" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="Color" type="xs:normalizedString" use="optional"/>
+											<xs:attribute name="BgColor" type="xs:normalizedString" use="optional"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Font-Size" type="xs:integer" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="COLUMN-RATIOS" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="COLUMN-RATIO" type="xs:normalizedString" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="RatioSum" type="xs:long" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PAGEBREAK">
+		<xs:annotation>
+			<xs:documentation>A block containing no information, but the desire to have a break</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:element name="HTML-BLOCK">
+		<xs:annotation>
+			<xs:documentation>A block containing a HTML code</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REPORTLINK">
+		<xs:annotation>
+			<xs:documentation>An element containing a reference to a xml file</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="LINKTEXT" type="xs:normalizedString"/>
+				<xs:element name="DESCRIPTION" type="xs:string" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+			<xs:attribute name="FILE" type="xs:normalizedString" use="required"/>
+			<xs:attribute name="ANCHOR" type="xs:normalizedString" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DECISION">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+					<xs:attribute name="Name" type="xs:string" use="required"/>
+					<xs:attribute name="Verdict" type="xs:string" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ANCHOR">
+		<xs:annotation>
+			<xs:documentation>just a simpe Anchor Element to link to, if custom tree nodes etc are used.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:attribute name="Id" type="xs:normalizedString" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="Font-Weight-Type">
+		<xs:annotation>
+			<xs:documentation>Type for the font wight attributes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="NORMAL"/>
+			<xs:enumeration value="BOLD"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="Font-Style-Type">
+		<xs:annotation>
+			<xs:documentation>Type for the font style attributes</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:normalizedString">
+			<xs:enumeration value="NORMAL"/>
+			<xs:enumeration value="ITALIC"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

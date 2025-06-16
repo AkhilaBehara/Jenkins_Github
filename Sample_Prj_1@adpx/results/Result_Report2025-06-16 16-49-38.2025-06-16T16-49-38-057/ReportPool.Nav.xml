@@ -1,0 +1,6 @@
+<AUTOMATIONDESK-BLOCKREPORT xmlns="http://www.dSPACE.de/AutomationDesk/BlockReport"><TREE>
+<TREE-ENTRY Id="1002" Entry-Id="1003" Symbol="Resources\DSProject.png" Expanded="false"><TEXT>Sample_Prj_1</TEXT>
+<TREE-ENTRY Id="1004" Entry-Id="1005" Symbol="Resources\DSSequence.png" Expanded="false"><TEXT>TC_1</TEXT><STATUSICON>Resources\Passed.png</STATUSICON></TREE-ENTRY>
+<TREE-ENTRY Id="1010" Entry-Id="1011" Symbol="Resources\DSSequence.png" Expanded="false"><TEXT>TC_2</TEXT><STATUSICON>Resources\Passed.png</STATUSICON></TREE-ENTRY>
+<TREE-ENTRY Id="1016" Entry-Id="1017" Symbol="Resources\DSSequence.png" Expanded="false"><TEXT>TC_3</TEXT><STATUSICON>Resources\Passed.png</STATUSICON></TREE-ENTRY>
+<TREE-ENTRY Id="1022" Entry-Id="1023" Symbol="Resources\DSSequence.png" Expanded="false"><TEXT>TC_4</TEXT><STATUSICON>Resources\Passed.png</STATUSICON></TREE-ENTRY><STATUSICON>Resources\Passed.png</STATUSICON></TREE-ENTRY></TREE></AUTOMATIONDESK-BLOCKREPORT>

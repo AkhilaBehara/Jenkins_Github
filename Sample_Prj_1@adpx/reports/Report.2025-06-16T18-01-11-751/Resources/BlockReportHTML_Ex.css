@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+.section { margin-top:36px; margin-bottom:36px; }
+.section .header { text-align:center; border-top: 1px solid #666666; border-left: 1px solid #666666; border-right: 1px solid #666666; border-bottom: 0px; padding:8px; font-weight:bold; font-size:14; margin-bottom:0px; }
+.section .body { border: 1px solid #666666; padding:16px; margin-top:0px; font-size:12; }
+
+.execution-information {width:100%; border: 0px; cellpadding:3px; text-align: left; margin-top: 4px; margin-bottom: 4px; }
+.execution-information th { text-align:left; font-size:12; }
+.execution-information td { text-align: left; font-size:12; }
+
+
+.overview-teststep { border: 1px solid #666666; padding:12px; margin-top:2px; margin-bottom:2px;}
+
+
+
+.sequence-overview { width:100%; background-color:#FFFFFF; cellpadding:0px; cellspacing:0px; border-collapse:collapse; }
+.sequence-overview th { font-weight:normal; text-align:left; padding-left: 4px; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.sequence-overview th img { margin-right:3px; }
+.sequence-overview td { padding-left:3px; padding-right:3px; text-align:center; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.sequence-overview tfoot td { font-weight:bold; }
+
+.sequence-overview .PROJECT { background-color: #003366; color: #FFFFFF; }
+.sequence-overview .FOLDER { background-color: #6699FF; }
+.sequence-overview .SEQUENCE { }
+.sequence-overview .empty { background-color: #EEEEEE; border:none; }
+
+.sequence-overview .PROJECT a:link { color:#FFFFFF; }
+.sequence-overview .PROJECT a:visited { color:#DDDDDD; }
+
+
+.test-overview { width:100%; background-color:#FFFFFF; cellpadding:0px; cellspacing:0px; border-collapse:collapse; }
+.test-overview th { font-weight:normal; text-align:left; padding-left: 4px; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.test-overview th img { margin-right:3px; }
+.test-overview td { padding-left:3px; padding-right:3px; text-align:center; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.test-overview tfoot td { font-weight:bold; }
+
+.test-overview .Container {background-color:#99CCFF; }
+.test-overview .test { background-color:#8080FF; }
+.test-overview .group { background-color:#C0C0FF; }
+.test-overview .step { }
+.test-overview .empty { background-color: #EEEEEE; border:none; }
+
+.test-overview .exception a:link { color:#EE0000; }
+.test-overview .exception a:visited { color:#EE3333; }
+
+.test-overview .additional-result a:link { color:#C000C0; }
+.test-overview .additional-result a:visited { color:##FF80FF; }
+
+
+.sequence-statistic { width:100%; background-color:#FFFFFF; cellpadding:0px; cellspacing:0px; border-collapse:collapse; }
+
+.sequence-statistic thead th { font-weight:bold; }
+.sequence-statistic th { font-weight:normal; text-align:left; padding-left: 4px; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.sequence-statistic th img { margin-right:3px; }
+.sequence-statistic tfoot td { font-weight:bold; }
+.sequence-statistic td { padding-left:3px; padding-right:3px; text-align:center; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.sequence-statistic .empty { background-color: #EEEEEE; border:none; }
+
+
+.Passed                 { background-color:#D3FFCA; }
+
+.Undefined              { background-color:#FFFFD4; }
+.PassedUndefined        { background-color:#FFFFD4; }
+
+.Failed                 { background-color:#FFCACA; }
+.PassedFailed           { background-color:#FFCACA; }
+.FailedUndefined        { background-color:#FFCACA; }
+.PassedFailedUndefined  { background-color:#FFCACA; }
+
+.Error                      { color:#FF0000; background-color: #FFFFFF; font-weight:bold;}
+.PassedError                { color:#FF0000; background-color: #FFFFFF; }
+.FailedError                { color:#FF0000; background-color: #FFFFFF; }
+.UndefinedError             { color:#FF0000; background-color: #FFFFFF; }
+.PassedFailedError          { color:#FF0000; background-color: #FFFFFF; }
+.PassedUndefinedError       { color:#FF0000; background-color: #FFFFFF; }
+.PassedFailedUndefinedError { color:#FF0000; background-color: #FFFFFF; }
+.FailedUndefinedError       { color:#FF0000; background-color: #FFFFFF; }
+
+
+.test-statistic { width:100%; background-color:#FFFFFF; cellpadding:0px; cellspacing:0px; border-collapse:collapse; }
+
+.test-statistic thead th { font-weight:bold; }
+.test-statistic th { font-weight:normal; text-align:left; padding-left: 4px; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.test-statistic th img { margin-right:3px; }
+.test-statistic tfoot td { font-weight:bold; }
+.test-statistic td { padding-left:3px; padding-right:3px; text-align:center; border: 1px solid #BABABA; vertical-align:center; font-size:12; }
+.test-statistic .empty { background-color: #EEEEEE; border:none; }
+
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Standard.Sequence name="TC_2" author="Z0145567" creation-date="2025-06-16T15:06:00" modification-date="2025-06-16T15:19:27" id="{6A3FFD9C-B6B5-4B69-9382-489BF0FB511D}" schema-version="2.0.5">
+	<library-description>Represents a sequence.</library-description>
+	<subsystems>
+		<MainLibrary.Serial name="Action" author="Z0145567" creation-date="2025-06-16T15:15:39" modification-date="2025-06-16T15:20:54">
+			<library-description>To execute subsystems sequentially.</library-description>
+			<data-objects>
+				<MainLibrary.Float name="a" author="Z0145567" creation-date="2025-06-16T15:16:08" modification-date="2025-06-16T18:01:12">
+					<value>1750077072.076493</value>
+				</MainLibrary.Float>
+				<MainLibrary.Float name="b" author="Z0145567" creation-date="2025-06-16T15:16:08" modification-date="2025-06-16T18:01:13">
+					<value>1750077073.0894983</value>
+				</MainLibrary.Float>
+			</data-objects>
+			<subsystems>
+				<MainLibrary.Exec name="Exec" author="Z0145567" creation-date="2025-06-16T15:18:17" modification-date="2025-06-16T15:18:51">
+					<library-description>To execute valid Python code.</library-description>
+					<command>
+						import time
+						
+						_AD_.a = time.time()
+						time.sleep(1)  # simulate test delay
+						_AD_.b = time.time()
+					</command>
+				</MainLibrary.Exec>
+				<FrameworkBuilder.Frame name="Check" library-link="Test Builder.Check" state="library-link" linked-modification-date="2018-12-04T15:34:32" author="Z0145567" creation-date="2025-06-16T15:14:33" modification-date="2025-06-16T15:18:12" color="#7FFFD4">
+					<library-description>
+						
+						To check a condition and generate a passed or failed verdict.
+						
+						HELP: automationdesk:///AutomationDeskDocumentation?Show=Help#12600004
+					</library-description>
+					<parameters>
+						<MainLibrary.Dictionary name="Attributes" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:18:12" id="{C7CB2653-8ED4-4243-866A-2677A727DBAD}">
+							<value type="expr">{}</value>
+						</MainLibrary.Dictionary>
+						<MainLibrary.Condition name="Condition" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:19:15">
+							<value>_AD_.b - _AD_.a &gt;= 1</value>
+						</MainLibrary.Condition>
+						<MainLibrary.String name="Message" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:18:12">
+							<value></value>
+						</MainLibrary.String>
+					</parameters>
+				</FrameworkBuilder.Frame>
+			</subsystems>
+		</MainLibrary.Serial>
+	</subsystems>
+</Standard.Sequence>

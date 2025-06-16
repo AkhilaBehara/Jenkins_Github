@@ -1,0 +1,54 @@
+<AUTOMATIONDESK-BLOCKREPORT xmlns="http://www.dSPACE.de/AutomationDesk/BlockReport"><TREE tree-file-ref="ReportPool.Nav.xml"></TREE><TITLE Id="1001.title"><EXEC-NAME>Sample_Prj_1</EXEC-NAME><RESULT-NAME>Result_Report2025-06-16 16-34-51</RESULT-NAME><DESCRIPTION>COM API, Execute project</DESCRIPTION><PRE-BLOCKS><PICTURE-BLOCK Id="logo"><PATH Alignment="center">Resources\dSPACE_Logo.png</PATH></PICTURE-BLOCK></PRE-BLOCKS><POST-BLOCKS></POST-BLOCKS></TITLE>
+
+<HEADER Id="1002" Type="PROJECT" Title="Sample_Prj_1"><BLOCKS>
+</BLOCKS>
+
+<HEADER Id="1004" Type="SEQUENCE" Title="TC_1"><BLOCKS>
+<ANCHOR Id="_TESTBUILDER_ITEM_1_"></ANCHOR>
+<TEXT-BLOCK Id="1007"><TEXT Color="#1010ff" Font-Size="5"></TEXT><TEXT Color="#1010ff" Font-Size="5">1 Check</TEXT></TEXT-BLOCK>
+<DECISION Id="1008" Verdict="Passed" Name="Check">Condition := "_AD_.a+_AD_.b == _AD_.sum_expected"</DECISION>
+<TEXT-BLOCK Id="1009"><TEXT Color="#1010ff" Font-Size="5"></TEXT></TEXT-BLOCK>
+
+</BLOCKS>
+
+<START-TIME>2025-06-16 16:34:51</START-TIME><STOP-TIME>2025-06-16 16:34:51</STOP-TIME><EXECUTION-DURATION>0.102 seconds</EXECUTION-DURATION><NAME>TC_1</NAME><LIBRARY-LINK></LIBRARY-LINK><CREATION-DATE>2025-06-16 15:06:00</CREATION-DATE><MODIFICATION-DATE>2025-06-16 15:18:00</MODIFICATION-DATE><AUTHOR>Z0145567</AUTHOR><DESCRIPTION></DESCRIPTION><RESULT-STATE>Passed</RESULT-STATE><HIERARCHY-NAME>Sample_Prj_1.  TC_1</HIERARCHY-NAME>
+</HEADER>
+
+<HEADER Id="1010" Type="SEQUENCE" Title="TC_2"><BLOCKS>
+<ANCHOR Id="_TESTBUILDER_ITEM_2_"></ANCHOR>
+<TEXT-BLOCK Id="1013"><TEXT Color="#1010ff" Font-Size="5"></TEXT><TEXT Color="#1010ff" Font-Size="5">2 Check</TEXT></TEXT-BLOCK>
+<DECISION Id="1014" Verdict="Passed" Name="Check">Condition := "_AD_.b - _AD_.a &gt;= 1"</DECISION>
+<TEXT-BLOCK Id="1015"><TEXT Color="#1010ff" Font-Size="5"></TEXT></TEXT-BLOCK>
+
+</BLOCKS>
+
+<START-TIME>2025-06-16 16:34:51</START-TIME><STOP-TIME>2025-06-16 16:34:52</STOP-TIME><EXECUTION-DURATION>1.026 seconds</EXECUTION-DURATION><NAME>TC_2</NAME><LIBRARY-LINK></LIBRARY-LINK><CREATION-DATE>2025-06-16 15:06:00</CREATION-DATE><MODIFICATION-DATE>2025-06-16 15:19:27</MODIFICATION-DATE><AUTHOR>Z0145567</AUTHOR><DESCRIPTION></DESCRIPTION><RESULT-STATE>Passed</RESULT-STATE><HIERARCHY-NAME>Sample_Prj_1.  TC_2</HIERARCHY-NAME>
+</HEADER>
+
+<HEADER Id="1016" Type="SEQUENCE" Title="TC_3"><BLOCKS>
+<ANCHOR Id="_TESTBUILDER_ITEM_3_"></ANCHOR>
+<TEXT-BLOCK Id="1019"><TEXT Color="#1010ff" Font-Size="5"></TEXT><TEXT Color="#1010ff" Font-Size="5">3 Check</TEXT></TEXT-BLOCK>
+<DECISION Id="1020" Verdict="Passed" Name="Check">Condition := "_AD_.sensor_status"</DECISION>
+<TEXT-BLOCK Id="1021"><TEXT Color="#1010ff" Font-Size="5"></TEXT></TEXT-BLOCK>
+
+</BLOCKS>
+
+<START-TIME>2025-06-16 16:34:52</START-TIME><STOP-TIME>2025-06-16 16:34:52</STOP-TIME><EXECUTION-DURATION>0.020 seconds</EXECUTION-DURATION><NAME>TC_3</NAME><LIBRARY-LINK></LIBRARY-LINK><CREATION-DATE>2025-06-16 15:06:01</CREATION-DATE><MODIFICATION-DATE>2025-06-16 15:21:29</MODIFICATION-DATE><AUTHOR>Z0145567</AUTHOR><DESCRIPTION></DESCRIPTION><RESULT-STATE>Passed</RESULT-STATE><HIERARCHY-NAME>Sample_Prj_1.  TC_3</HIERARCHY-NAME>
+</HEADER>
+
+<HEADER Id="1022" Type="SEQUENCE" Title="TC_4"><BLOCKS>
+<ANCHOR Id="_TESTBUILDER_ITEM_4_"></ANCHOR>
+<TEXT-BLOCK Id="1025"><TEXT Color="#1010ff" Font-Size="5"></TEXT><TEXT Color="#1010ff" Font-Size="5">4 Check</TEXT></TEXT-BLOCK>
+<DECISION Id="1026" Verdict="Passed" Name="Check">Condition := "9.5 &lt;= _AD_.measured_value &lt;= 10.5"</DECISION>
+<TEXT-BLOCK Id="1027"><TEXT Color="#1010ff" Font-Size="5"></TEXT></TEXT-BLOCK>
+
+</BLOCKS>
+
+<START-TIME>2025-06-16 16:34:52</START-TIME><STOP-TIME>2025-06-16 16:34:52</STOP-TIME><EXECUTION-DURATION>0.031 seconds</EXECUTION-DURATION><NAME>TC_4</NAME><LIBRARY-LINK></LIBRARY-LINK><CREATION-DATE>2025-06-16 15:06:01</CREATION-DATE><MODIFICATION-DATE>2025-06-16 15:23:10</MODIFICATION-DATE><AUTHOR>Z0145567</AUTHOR><DESCRIPTION></DESCRIPTION><RESULT-STATE>Passed</RESULT-STATE><HIERARCHY-NAME>Sample_Prj_1.  TC_4</HIERARCHY-NAME>
+</HEADER>
+
+
+<START-TIME>2025-06-16 16:34:51</START-TIME><STOP-TIME>2025-06-16 16:34:52</STOP-TIME><EXECUTION-DURATION>1.317 seconds</EXECUTION-DURATION><NAME>Sample_Prj_1</NAME><LIBRARY-LINK></LIBRARY-LINK><CREATION-DATE>2025-06-16 15:05:30</CREATION-DATE><MODIFICATION-DATE>2025-06-16 16:34:51</MODIFICATION-DATE><AUTHOR>Z0145567</AUTHOR><DESCRIPTION></DESCRIPTION><RESULT-STATE>Passed</RESULT-STATE><HIERARCHY-NAME>Sample_Prj_1</HIERARCHY-NAME>
+</HEADER>
+
+<GLOBAL-INFORMATION FinishingState="Completed"><BUILDIN-LIBRARY State="Online" Name="Main Library" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Framework Builder" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Dialogs" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Report" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Evaluation" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="MATLAB Access" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="RS232" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="XIL API" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Remote Calibration (COM)" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Remote Diagnostics (COM)" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><BUILDIN-LIBRARY State="Online" Name="Real-Time Testing" Symbol="Resources\DSLibFolder.png"></BUILDIN-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="ControlDesk Access" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="XIL API Convenience" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="Test Builder" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="Platform Management" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="ModelDesk Access" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="MotionDesk Access" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Program Files\dSPACE AutomationDesk 6.4\Main\libraries" Name="Signal-Based Testing" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="C:\Users\Z0145567\Documents\dSPACE\AutomationDesk\6.4\Custom Library" Name="Custom Library" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="D:\SteerPrj\MB_EVA2\AD_Libs\Super_System" Name="MB_EVA2_SbW" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY><CUSTOM-LIBRARY FullDirectoryPath="D:\SteerPrj\Core\AD_Libs\ZF_Environment" Name="ZF_Environment" Symbol="Resources\DSLibRootCustom.png"></CUSTOM-LIBRARY></GLOBAL-INFORMATION></AUTOMATIONDESK-BLOCKREPORT>

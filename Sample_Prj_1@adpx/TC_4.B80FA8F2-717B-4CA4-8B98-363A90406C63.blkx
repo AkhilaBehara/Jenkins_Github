@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Standard.Sequence name="TC_4" author="Z0145567" creation-date="2025-06-16T15:06:01" modification-date="2025-06-16T15:23:10" id="{B80FA8F2-717B-4CA4-8B98-363A90406C63}" schema-version="2.0.5">
+	<library-description>Represents a sequence.</library-description>
+	<subsystems>
+		<MainLibrary.Serial name="Action" author="Z0145567" creation-date="2025-06-16T15:15:39" modification-date="2025-06-16T15:22:10">
+			<library-description>To execute subsystems sequentially.</library-description>
+			<data-objects>
+				<MainLibrary.Float name="measured_value" author="Z0145567" creation-date="2025-06-16T15:22:10" modification-date="2025-06-16T15:22:17">
+					<value>9.8</value>
+				</MainLibrary.Float>
+			</data-objects>
+			<subsystems>
+				<FrameworkBuilder.Frame name="Check" library-link="Test Builder.Check" state="library-link" linked-modification-date="2018-12-04T15:34:32" author="Z0145567" creation-date="2025-06-16T15:14:33" modification-date="2025-06-16T15:22:00" color="#7FFFD4">
+					<library-description>
+						
+						To check a condition and generate a passed or failed verdict.
+						
+						HELP: automationdesk:///AutomationDeskDocumentation?Show=Help#12600004
+					</library-description>
+					<parameters>
+						<MainLibrary.Dictionary name="Attributes" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:22:00" id="{62EA49D7-0D61-415B-A741-50DCA2AB7D7B}">
+							<value type="expr">{}</value>
+						</MainLibrary.Dictionary>
+						<MainLibrary.Condition name="Condition" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:22:51">
+							<value>9.5 &lt;= _AD_.measured_value &lt;= 10.5</value>
+						</MainLibrary.Condition>
+						<MainLibrary.String name="Message" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:22:00">
+							<value></value>
+						</MainLibrary.String>
+					</parameters>
+				</FrameworkBuilder.Frame>
+			</subsystems>
+		</MainLibrary.Serial>
+	</subsystems>
+</Standard.Sequence>

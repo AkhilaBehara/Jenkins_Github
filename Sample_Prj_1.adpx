@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Standard.Project name="Sample_Prj_1" author="Z0145567" creation-date="2025-06-16T15:05:30" modification-date="2025-06-16T18:01:11" schema-version="2.0.5">
+	<library-description>Represents a project.</library-description>
+	<results>
+		<Standard.Result name="Result_Report2025-06-16 16-31-50" author="Z0145567" creation-date="2025-06-16T16:31:50" modification-date="2025-06-16T16:31:52" verdict="Passed" result-dir="Result_Report2025-06-16 16-31-50.2025-06-16T16-31-50-764">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T16:31:52" modification-date="2025-06-16T16:31:52" report-dir="Report.2025-06-16T16-31-50-764"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+		<Standard.Result name="Result_Report2025-06-16 16-34-51" author="Z0145567" creation-date="2025-06-16T16:34:51" modification-date="2025-06-16T16:34:53" verdict="Passed" result-dir="Result_Report2025-06-16 16-34-51.2025-06-16T16-34-51-191">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T16:34:52" modification-date="2025-06-16T16:34:52" report-dir="Report.2025-06-16T16-34-51-191"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+		<Standard.Result name="Result_Report2025-06-16 16-44-34" author="Z0145567" creation-date="2025-06-16T16:44:34" modification-date="2025-06-16T16:44:35" verdict="Passed" result-dir="Result_Report2025-06-16 16-44-34.2025-06-16T16-44-34-175">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T16:44:35" modification-date="2025-06-16T16:44:35" report-dir="Report.2025-06-16T16-44-34-175"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+		<Standard.Result name="Result_Report2025-06-16 16-47-13" author="Z0145567" creation-date="2025-06-16T16:47:13" modification-date="2025-06-16T16:47:15" verdict="Passed" result-dir="Result_Report2025-06-16 16-47-13.2025-06-16T16-47-13-537">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T16:47:15" modification-date="2025-06-16T16:47:15" report-dir="Report.2025-06-16T16-47-13-537"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+		<Standard.Result name="Result_Report2025-06-16 16-49-38" author="Z0145567" creation-date="2025-06-16T16:49:38" modification-date="2025-06-16T16:49:39" verdict="Passed" result-dir="Result_Report2025-06-16 16-49-38.2025-06-16T16-49-38-057">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T16:49:39" modification-date="2025-06-16T16:49:39" report-dir="Report.2025-06-16T16-49-38-057"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+		<Standard.Result name="Result_Report2025-06-16 16-53-51" author="Z0145567" creation-date="2025-06-16T16:53:51" modification-date="2025-06-16T16:53:52" verdict="Passed" result-dir="Result_Report2025-06-16 16-53-51.2025-06-16T16-53-51-142">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T16:53:52" modification-date="2025-06-16T16:53:52" report-dir="Report.2025-06-16T16-53-51-142"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+		<Standard.Result name="Result_Report2025-06-16 18-01-11" author="Z0145567" creation-date="2025-06-16T18:01:11" modification-date="2025-06-16T18:01:13" verdict="Passed" result-dir="Result_Report2025-06-16 18-01-11.2025-06-16T18-01-11-751">
+			<description>COM API, Execute project</description>
+			<reports>
+				<Standard.HTMLReport name="Report" author="Z0145567" creation-date="2025-06-16T18:01:13" modification-date="2025-06-16T18:01:13" report-dir="Report.2025-06-16T18-01-11-751"></Standard.HTMLReport>
+			</reports>
+		</Standard.Result>
+	</results>
+	<subsystems>
+		<blkx-reference type="Standard.Sequence" name="TC_1" id="{B44AF395-F283-4FD9-9E06-E97658438AD0}" href="Sample_Prj_1@adpx\TC_1.B44AF395-F283-4FD9-9E06-E97658438AD0.blkx"></blkx-reference>
+		<blkx-reference type="Standard.Sequence" name="TC_2" id="{6A3FFD9C-B6B5-4B69-9382-489BF0FB511D}" href="Sample_Prj_1@adpx\TC_2.6A3FFD9C-B6B5-4B69-9382-489BF0FB511D.blkx"></blkx-reference>
+		<blkx-reference type="Standard.Sequence" name="TC_3" id="{9B14D62E-9D18-498E-9F2F-D91BEA64B11B}" href="Sample_Prj_1@adpx\TC_3.9B14D62E-9D18-498E-9F2F-D91BEA64B11B.blkx"></blkx-reference>
+		<blkx-reference type="Standard.Sequence" name="TC_4" id="{B80FA8F2-717B-4CA4-8B98-363A90406C63}" href="Sample_Prj_1@adpx\TC_4.B80FA8F2-717B-4CA4-8B98-363A90406C63.blkx"></blkx-reference>
+	</subsystems>
+</Standard.Project>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Standard.Sequence name="TC_1" author="Z0145567" creation-date="2025-06-16T15:06:00" modification-date="2025-06-16T15:18:00" id="{B44AF395-F283-4FD9-9E06-E97658438AD0}" schema-version="2.0.5">
+	<library-description>Represents a sequence.</library-description>
+	<subsystems>
+		<MainLibrary.Serial name="Action" author="Z0145567" creation-date="2025-06-16T15:15:39" modification-date="2025-06-16T15:16:26">
+			<library-description>To execute subsystems sequentially.</library-description>
+			<data-objects>
+				<MainLibrary.Float name="sum_expected" author="Z0145567" creation-date="2025-06-16T15:14:59" modification-date="2025-06-16T15:16:00">
+					<value>5</value>
+				</MainLibrary.Float>
+				<MainLibrary.Float name="a" author="Z0145567" creation-date="2025-06-16T15:16:08" modification-date="2025-06-16T15:16:18">
+					<value>2</value>
+				</MainLibrary.Float>
+				<MainLibrary.Float name="b" author="Z0145567" creation-date="2025-06-16T15:16:08" modification-date="2025-06-16T15:16:20">
+					<value>3</value>
+				</MainLibrary.Float>
+			</data-objects>
+			<subsystems>
+				<FrameworkBuilder.Frame name="Check" library-link="Test Builder.Check" state="library-link" linked-modification-date="2018-12-04T15:34:32" author="Z0145567" creation-date="2025-06-16T15:14:33" modification-date="2025-06-16T15:14:33" color="#7FFFD4">
+					<library-description>
+						
+						To check a condition and generate a passed or failed verdict.
+						
+						HELP: automationdesk:///AutomationDeskDocumentation?Show=Help#12600004
+					</library-description>
+					<parameters>
+						<MainLibrary.Dictionary name="Attributes" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:14:33" id="{29DEAF36-64D6-4193-A9EA-5796CC228F4E}">
+							<value type="expr">{}</value>
+						</MainLibrary.Dictionary>
+						<MainLibrary.Condition name="Condition" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:16:50">
+							<value>_AD_.a+_AD_.b == _AD_.sum_expected</value>
+						</MainLibrary.Condition>
+						<MainLibrary.String name="Message" data-direction="in" author="dSPACE GmbH" creation-date="2012-08-01T01:00:00" modification-date="2025-06-16T15:14:33">
+							<value></value>
+						</MainLibrary.String>
+					</parameters>
+				</FrameworkBuilder.Frame>
+			</subsystems>
+		</MainLibrary.Serial>
+	</subsystems>
+</Standard.Sequence>

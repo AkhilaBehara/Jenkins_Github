@@ -1,0 +1,33 @@
+.Logtable {
+	width: 80%;
+	background-color: #FFFFFF;
+	text-align: center;
+	font-size: 10pt;
+	border-spacing: 0px;
+	padding: 0px;
+	border-color: #FFFFFF;
+}
+
+.Logtable td {
+	border: 1px solid black;
+}
+
+.ErrorRow {
+	background-color: #FFCACA;
+	font-weight: bold;
+	color: red;
+}
+
+.WarningRow {
+	background-color: #FFFF64;
+}
+
+.MessageRow {
+	background-color: #B3FFFF;
+}
+
+body {
+	background-color: #7F7F7F;
+	font-family: Arial;
+	font-size: 10pt;
+}

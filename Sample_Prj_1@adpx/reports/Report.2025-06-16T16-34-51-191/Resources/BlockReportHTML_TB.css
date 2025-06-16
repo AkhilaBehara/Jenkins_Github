@@ -1,0 +1,170 @@
+@charset "UTF-8";
+ 
+BODY
+{
+padding: 2em;
+font-family: sans-serif;
+font-size: 10pt;
+margin: 1em;
+background-color: #FFFFFF;
+}
+
+.tb_overview { border-right: 1px solid #666666; border-bottom: 1px solid #666666; }
+.tb_overview_adjust { margin-left:-16px; }
+
+
+/* divs in testbuilder overview used for coloring
+ * Test Builder overview is composed of these divs
+ */
+.Structure  { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; margin-top: 5px; }
+.Executed   { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #F7F7FF; }
+.Passed     { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #D3FFCA; }
+.Undefined  { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFD4; }
+.Failed     { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFCACA; }
+.Error      { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+
+/* for backward compatibility only, these verdicts are obsolete */
+/*Undefined*/
+.PassedUndefined       { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFD4; }
+/*Failed*/
+.PassedFailed          { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFCACA; }   
+.PassedFailedUndefined { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFCACA; }
+.FailedUndefined       { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFCACA; }
+/*Error*/
+.PassedError                { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+.FailedError                { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+.UndefinedError             { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+.PassedFailedError          { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+.PassedUndefinedError       { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+.PassedFailedUndefinedError { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+.FailedUndefinedError       { margin-left: 16px; border-top: 1px solid #AAAAAA; border-left: 1px solid #AAAAAA; background: #FFFFFF; color: #FF0000; font-weight:bold; }
+
+/* a single item in test builder overview */
+.header_Structure   { padding: 1px 3px; }
+.header_Executed    { padding: 1px 3px; }
+.header_Passed      { padding: 1px 3px; }
+.header_Undefined   { padding: 1px 3px; }
+.header_Failed      { padding: 1px 3px; }
+.header_Error       { padding: 1px 3px; }
+
+/* test builder class(es) are formatted different
+ * header_xxx contains these a spans
+ */
+.testcase, .testblock                       { font-weight:bold;  color:#003399; font-size:larger; }
+.phase                                      { font-style:italic; color:#666666; }
+.step                                       { color:#003399; }
+.check, .assert, .abortunless, .exception   { font-weight:bold;  color:#003399; }
+.tb_PROJECT, .tb_FOLDER, .tb_SEQUENCE       { color:#666666; }
+
+/* spans in test builder overview headers */
+.tb_hierarchynumber { padding-left: 0.5em; padding-right: 0.5em; }
+.tb_title           { font-weight:bold; color:#66CCFF; }
+.tb_type            { padding-left: 1em; font-weight:lighter; }
+
+/* toggle images in test builder overview headers for arguments and returnvalues, if any */
+.tb_toggle_info     { margin-left:1em; margin-right:0.5em}
+.tb_toggle_info img { pading-left:0.5em; padding-right:0.5em}
+
+/* argument and returnvalues table in testbuilder obverview */
+.tb_info {width:100%; margin-bottom:6px; background-color:#FFFFFF; color:#666666; border: 1px solid #AAAAAA; border-collapse:collapse}
+.tb_info td {border: 1px solid #AAAAAA;}
+
+/* toggle invisibility of subordinated test builder items and or argument/returnvaue tables */
+.info-collapsed { display:none; }
+.info-expanded  { display:block;  margin-left:4em; }
+.body-collapsed { display:none; }
+.body-expanded  { display:block; }
+
+a   { text-decoration: none; }
+img { border:none; height:auto; max-width:100%; }
+
+
+.section            { margin-top:36px; margin-bottom:36px; }
+.section .header    { text-align:left; border-bottom: 1px solid #66CCFF; margin-bottom:6px; padding-left:5em; font-weight:bold; font-size:larger; color:#66CCFF;}
+.section .body      { font-size:10pt; }
+
+.execution-information      { width:100%; text-align: left; margin-top: 4px; margin-bottom: 4px; }
+.execution-information th   { text-align:left; font-size:12; color:#666666;}
+.execution-information td   { text-align: left; font-size:12; color:#666666;}
+
+
+.sequence-statistic             { width:100%; border-collapse:collapse; color:#666666; }
+
+.sequence-statistic thead th    { font-weight:bold; }
+.sequence-statistic th          { font-weight:normal; text-align:left; padding-left: 4px; border: 1px solid #666666; }
+.sequence-statistic th img      { margin-right:3px;}
+.sequence-statistic tfoot td    { font-weight:bold; }
+.sequence-statistic td          { padding-left:3px; padding-right:3px; text-align:center; border: 1px solid #666666; }
+.sequence-statistic .empty      { border:none; }
+
+.sequence-statistic .Failed     { background-color:#FFCACA; }
+.sequence-statistic .Undefined  { background-color:#FFFFD4; }
+.sequence-statistic .Passed     { background-color:#D3FFCA; }
+.sequence-statistic .Error      { background-color:#FFA77A; }
+
+
+.PageBreak {}
+
+.TitleEntry             { text-align: center; margin-bottom: 12px; color:#666666; }
+.TitleEntry h1          { font-size: x-large; }
+.TitleEntry h2          { font-size: larger; }
+.TitleEntry .Hint       { padding: 6px; color:#66CCFF; }
+.TitleEntry .Description{ border-top: 1px solid #666666; padding: 8px; }
+
+.Header             { text-align: left; font-size: larger; background-color:#FFFFFF; margin-top: 20px; margin-bottom: 4px;  border: 1px solid #666666; }
+.Header th          { text-align: left; font-size: 12px; color:#666666;}
+.Header td          { text-align: left; font-size: 12px; color:#666666;}
+.ResultStateIcon    { width: 16px; }
+.DynamicAttributes  { table-layout: fixed; width: 100%; }
+.StaticAttributes   { table-layout: fixed; width: 100%; }
+
+.Title              { font-weight: bold; color:#666666;}
+.Project .Title     { background-color: #003366; color: #FFFFFF; width:100%; }
+.Project .Title td  { color: #FFFFFF; }
+.Folder .Title      { background-color: #6699FF; color: #003399; width:100%; }
+.Folder .Title td   { color: #003399;  }
+.Sequence .Title    { background-color: #99CCFF; color: #003399;  width:100%; }
+.Sequence .Title td { color: #003399; }
+.Block .Title       { background-color: #BBDDFF; color: #003399; width:100%; }
+.Block .Title td    { color: #003399; }
+
+.BlockReport    { border: 1px solid #666666; margin-top: 2px; margin-bottom: 16px; padding: 6px;  background: #EEEEEE; font-family:monospace; }
+.SubReport      { border: 1px dashed #666666; margin-top: 2px; margin-bottom: 16px; padding: 6px; }
+
+.LinkBlock { margin-top: 4px; margin-bottom: 4px; }
+
+.ImageBlock             { margin-top: 4px; margin-bottom: 8px; }
+.ImageBlock .Title      { background-color: #EEEEEE; color: #000000;  }
+.ImageBlock .Caption    {}
+.ImageBlock .Description{ margin-top: 0.5ex; }
+
+.ReportLink                 { margin-top: 4px; margin-bottom: 4px; }
+.ReportLink .LinkText       {}
+.ReportLink .Description    { font-style: italic; }
+
+.TableBlock     {  border:1px solid #555555; margin-top: 4px; margin-bottom: 8px; border-collapse: collapse; empty-cells: show; width: 100%; font-size: 12px; }
+.TableBlock th  { background-color: #DDDDDD; border:1px solid #555555; }
+.TableBlock td  { border:1px solid #555555; }
+
+.TextBlock1 { margin-top: 4px; margin-bottom: 4px; font-size: 6px; }
+.TextBlock2 { margin-top: 4px; margin-bottom: 4px; font-size: 8px; }
+.TextBlock3 { margin-top: 4px; margin-bottom: 4px; font-size: 10px; }
+.TextBlock4 { margin-top: 4px; margin-bottom: 4px; font-size: 12px; }
+.TextBlock5 { margin-top: 4px; margin-bottom: 4px; font-size: 14px; }
+.TextBlock6 { margin-top: 4px; margin-bottom: 4px; font-size: 16px; }
+.TextBlock7 { margin-top: 4px; margin-bottom: 4px; font-size: 18px; }
+.TextBlock8 { margin-top: 4px; margin-bottom: 4px; font-size: 20px; }
+.TextBlock9 { margin-top: 4px; margin-bottom: 4px; font-size: 22px; }
+.TextBlock10{ margin-top: 4px; margin-bottom: 4px; font-size: 24px; }
+
+.ExecutedDecision  {border:1px solid #CCCCCC;  margin-top:2px; padding:2px; }
+.PassedDecision    {border:1px solid #CCCCCC;  background-color: #D3FFCA; margin-top:2px; margin-bottom:2px; padding:2px; }
+.UndefinedDecision {border:1px solid #CCCCCC;  background-color: #FFFFD4; margin-top:2px; margin-bottom:2px; padding:2px; }
+.FailedDecision    {border:1px solid #CCCCCC;  background-color: #FFCACA; margin-top:2px; margin-bottom:2px; padding:2px; }
+.ErrorDecision     {border:1px solid #FF0000;  background-color: #FFFFFF; margin-top:2px; margin-bottom:2px; padding:2px; color:#FF0000;  }
+
+.ExecutedDecision pre  {margin:0pt;padding:1px;}
+.PassedDecision pre    {margin:0pt;padding:1px;}
+.UndefinedDecision pre {margin:0pt;padding:1px;}
+.FailedDecision pre    {margin:0pt;padding:1px;}
+.ErrorDecision pre     {margin:0pt;padding:1px;}
